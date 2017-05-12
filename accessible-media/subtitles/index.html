@@ -66,7 +66,7 @@
       
 
 
-      <h2 id="sub_basics">Subtitle basics</h2>
+      <h2 id="subtitle-basics">Subtitle basics</h2>
 
 <p>Subtitles (also known as foreign-language subtitles) are, from a
 technical perspective, similar to captions: they are text (or sometimes
@@ -96,7 +96,7 @@ other symbols. The bitmaps themselves can still be transmitted using
 markup, though, by using <a href="https://www.w3.org/TR/ttml-imsc1/">TTML Profiles for Internet Media Subtitles and
 Captions 1.0 (IMSC1)</a>.</p>
 
-<h2 id="cc_sub_diffs">Differences between subtitles and captions</h2>
+<h2 id="differences-between-subtitles-and-captions">Differences between subtitles and captions</h2>
 
 <p>Subtitles are not the same as captions, nor are they aimed at the same
 audiences. Here are some of the basic differences.</p>
@@ -122,20 +122,21 @@ audiences. Here are some of the basic differences.</p>
 	</tr>
 </table>
 
-<h2 id="sub_delivery">Delivering subtitles to viewers</h2>
+<h2 id="delivering-subtitles-to-viewers">Delivering subtitles to viewers</h2>
 
 <p>Subtitles are delivered to viewers using HTML5's <code>&lt;track&gt;</code> element.
 <code>&lt;track&gt;</code> is used as a child element of the <code>&lt;video&gt;</code> element. Be sure
 to set the value of the <code>kind</code> attribute to <code>"subtitles"</code> and to specify
 the language in the <code>label</code> attribute:</p>
 
-<p>Code snippet:</p>
-
+<figure class="code ">
+  <figcaption>Code snippet: </figcaption>
 <pre class="highlight html"><code><span class="nt">&lt;video</span> <span class="na">controls</span><span class="nt">&gt;</span>
     <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"myvideo.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span> <span class="nt">/&gt;</span>
-        track kind="subtitles" src="my_italian_subtitles.vtt" srclang="en" label="Italian" default /&gt;
+    <span class="nt">&lt;track</span> <span class="na">kind=</span><span class="s">"subtitles"</span> <span class="na">src=</span><span class="s">"my_italian_subtitles.vtt"</span> <span class="na">srclang=</span><span class="s">"en"</span> <span class="na">label=</span><span class="s">"Italian"</span> <span class="na">default</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/video&gt;</span>
 </code></pre>
+</figure>
 <p>In some cases, it may be necessary to use captions and subtitles
 together: for example, if an important sound effect is used in the audio
 track, that sound can be conveyed through a single sound-effect caption
@@ -276,8 +277,415 @@ subtitle." src="../../img/cc_sub_together.png" /></p>
 	          
 	        
 	      
+	        
+	          
+	        
+	      
 	    </ul>
 	  
+	  
+	    <p><strong>Techniques:</strong></p>
+	    <ul>
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	            <li><a href="https://www.w3.org/TR/WCAG20-TECHS/G87">G87: Providing closed captions</a></li>
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	    </ul>
 	  
   </div>
 </div>
@@ -414,7 +822,7 @@ subtitle." src="../../img/cc_sub_together.png" /></p>
         
           
             <li>
-              <a class="" href="../decision-tree/"><span class="count"></span><span class="txt">Decision Tree</span></a>
+              <a class="" href="../decision-tree/"><span class="count"></span><span class="txt">Decision Trees</span></a>
               
             </li>
           
