@@ -1,0 +1,581 @@
+<!doctype html>
+<html class="no-js no-svg" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>
+  Production options for audio descriptions
+  
+    
+       &bull; Accessible Media
+    
+  
+  &bull; WAI Web Accessibility Tutorials
+  </title>
+  <link rel="canonical" href="https://www.w3.org/WAI/tutorials/accessible-media/production-audio-description/" />
+  <meta name="viewport" content="width=device-width">
+  <link href="../../stylesheets/wai-act-1c96b559.css" rel="stylesheet" type="text/css" />
+  <script src="../../javascripts/modernizr-a1c597b5.js" type="text/javascript"></script>
+  <link rel="mask-icon" href="../../img/w3cwai-maskicon-cf2cdf03.svg" color="#003366">
+</head>
+<body class="texts">
+  <header role="banner">
+    <div class="w3c-wai-header">
+      <a href="http://w3.org/"><img alt="W3C" width="90" src="../../img/w3c-bde9a11f.svg" /></a>
+      <a href="http://w3.org/WAI/" class="wai"><img alt="Web Accessibility Initiative" src="../../img/wai-590850fc.svg" /></a>
+    </div>
+    <div class="page-title">
+      <a class="" href="../../">Web Accessibility Tutorials <span class="subheading">Guidance on how to create websites that meet WCAG</span></a>
+    </div>
+  </header>
+  <div class="with-side-menu">
+    <nav aria-label="Skip links" role="navigation">
+      <a href="#nav" class="btn btn-jump">Jump to the navigation</a>
+    </nav>
+<main role="main" class="content editors-draft">
+  <article role="article">
+    <header class="tutorial-heading">
+      <nav class="breadcrumb" aria-label="Breadcrumbs" role="navigation">
+        <p>
+          <span class="home"><a class="" href="../../"><span class="count"></span><span class="txt">Tutorials home</span></a></span> <span class="icon icon-chevron-right"></span><span class="visuallyhidden">»</span>
+          <span class="other">
+            
+              <a class="" href="../"><span class="count"></span><span class="txt">Accessible Media</span></a> <span class="icon icon-chevron-right"></span><span class="visuallyhidden">»</span>
+            
+            
+            <span class="current-a"><span class="count"></span><span class="txt"><span class="visuallyhidden">Current: </span>Production options for audio descriptions</span></span>
+          </span>
+        </p>
+      </nav>
+      <h1>
+        Production options for audio descriptions
+      </h1>
+    </header>
+
+    
+    
+      <div class="status">
+        <p><strong>Status:</strong> This is not ready for detailed review. It is an in-progress, unapproved editor’s draft.</p>
+      </div>
+    
+
+
+    <div class="inner">
+
+      
+
+      
+
+
+      <h2 id="description-basics">Description basics</h2>
+
+<p>Audio descriptions can be open or closed:</p>
+
+<ul>
+  <li><strong>Open audio descriptions</strong> are integrated into the program audio
+track and are heard by everyone. They cannot be turned off.</li>
+  <li><strong>Closed audio descriptions</strong> can be turned on and off by viewers.</li>
+</ul>
+
+<p>Additionally…</p>
+
+<ul>
+  <li>Audio descriptions are usually timed to play during pauses or breaks
+in narration or dialog, although <a href="#ext_dx">extended audio
+descriptions</a> may be implemented where necessary.</li>
+  <li>In cases where no pauses are available, a single summary, called a
+pre-description, can be inserted at the beginning of the
+presentation.</li>
+  <li>Audio-description tracks can be presented as pre-recorded
+human-recorded speech or text-to-speech (TTS) audio, or they can be
+text tracks that are delivered on the fly invisibly and read aloud
+by screen readers.</li>
+</ul>
+
+<p>Most described content today is presented with open descriptions, using
+one of two options:</p>
+
+<ul>
+  <li>Two separate videos, one with open descriptions, and the other with
+no descriptions. Authors give users a link or some other method to
+choose one or the other.</li>
+  <li>A single video that contains two audio tracks, one with descriptions
+and one without. Authors give users a button or menu to switch from
+one track to the other.</li>
+</ul>
+
+<h2 id="pre-produced-audio-descriptions">Pre-produced audio descriptions</h2>
+
+<p>Describing a video can be a time-consuming and complex process,
+depending on the subject matter. Before beginning, take a look at the
+<a href="page8.html">description decision tree</a> to determine if descriptions are
+even necessary. For longer videos, it may be more time- and
+cost-efficient to hire a professional audio-description service provider
+to write and record descriptions.</p>
+
+<p>Descriptions are usually recorded as human narration before being
+integrated into the video presentation, but technology and markup now
+exist to convey descriptions as text which are read aloud on the fly by
+screen readers or other text-to-speech (TTS) methods. <a href="#tts_dx">Read more about
+text-to-speech descriptions</a>.</p>
+
+<p>Here, a paragraph is missing…</p>
+
+<p>An excellent place to learn the basics about audio descriptions is <a href="http://www.descriptionkey.org/">The
+Description Key</a>. See <a href="https://www.w3.org/WAI/perspectives/captions.html">an
+example of a described
+video</a>, and be sure
+to select the “Enable audio description” button located just below the
+player to turn on the descriptions. Other <a href="http://www.acb.org/adp/samples.html">audio-description
+samples</a> are available from the
+American Council of the Blind’s <a href="http://www.acb.org/adp/">Audio Description
+Project</a>.</p>
+
+<h2 id="production-workflow-audio-descriptions-human-recorded-narration">Production workflow: audio descriptions (human-recorded narration)</h2>
+
+<h3 id="basic-workflow-for-creating-pre-produced-audio-descriptions">Basic workflow for creating pre-produced audio descriptions:</h3>
+
+<figure class="sample ">
+  <figcaption>Example: </figcaption>
+  <div class="box-content">
+<ol>
+  <li><strong>Watch the video</strong><br />
+Note opportunities for descriptive narration (i.e., pauses in
+narration or dialog into which descriptions can be inserted).</li>
+  <li><strong>Write the description script</strong><br />
+Use a description-authoring tool, a word processor or any text
+editor to create the script that will be recorded by the narrator.</li>
+  <li><strong>Record the descriptions</strong><br />
+Using audio-editing software, record the narrator reading the
+description script. <a href="http://www.descriptionkey.org/technical_issues.html">Learn more about recording audio
+descriptions</a>.
+    <ul>
+      <li>Alternatively, create a computer-generated rendering of the
+description script using TTS software. <a href="http://ncamftp.wgbh.org/ibm/dvs/">See examples of
+pre-recorded TTS descriptions</a>
+to learn whether or not they are appropriate for all types of
+media presentations.</li>
+    </ul>
+  </li>
+  <li><strong>Create an open-described audio track</strong><br />
+Using audio-editing software, duplicate the original program audio
+track, then paste each audio description into this track at the
+appropriate time intervals. Add this new, open-described audio track
+to the presentation.</li>
+</ol>
+
+
+  </div></figure>
+
+<p>When recording the descriptions, it will pay to create the
+highest-quality audio files possible. Keep these points in mind:</p>
+
+<ul>
+  <li>Use the highest-quality microphone and recording software available.</li>
+  <li>Use a microphone stand and speak clearly into the microphone.</li>
+  <li>Record the descriptions in a room that is isolated from all external
+sounds.</li>
+  <li>Avoid rooms with hard surfaces (e.g., tile or wood floors).</li>
+  <li>When mixing the descriptions into the program audio, lower the
+program-audio level when the description plays while simultaneously
+raising the description's audio level. When the description is
+finished playing, lower the description audio level and raise the
+program-audio level to its proper setting. Repeat this process
+(known as "ducking") for every description instance.</li>
+</ul>
+
+<h2 id="production-workflow-audio-descriptions-tts-narration">Production workflow: audio descriptions (TTS narration)</h2>
+
+<p>TTS descriptions are not pre-recorded. Instead, they are transmitted at
+the proper intervals to users during playback, and are read aloud by the
+user's screen reader. Think of them as an invisible text track that
+screen readers can read aloud as the text is delivered. See <a href="http://ncamftp.wgbh.org/ibm/dvs/">examples of
+TTS descriptions</a>. The basic workflow
+for TTS audio descriptions generally follows this pattern:</p>
+
+<h3 id="basic-workflow-for-creating-pre-produced-tts-audio-descriptions">Basic workflow for creating pre-produced TTS audio descriptions:</h3>
+
+<figure class="sample ">
+  <figcaption>Example: </figcaption>
+  <div class="box-content">
+<ol>
+  <li><strong>Watch the video</strong><br />
+Note opportunities for descriptive narration (i.e., pauses in
+narration or dialog into which descriptions can be inserted).</li>
+  <li><strong>Write the description script</strong><br />
+Using a <strong>caption-editing tool</strong>, write the description script that
+will be read aloud by a screen reader during the time of playback.</li>
+  <li><strong>Assign timecodes to each description</strong><br />
+Each timecode will represent when the description should be read by
+the user's screen reader.</li>
+  <li><strong>Export the description file</strong><br />
+Use the caption format (e.g., WebVTT or TTML) that is supported by
+the target player. This file will be transmitted during playback and
+will be read aloud by the user's screen reader.</li>
+</ol>
+
+
+  </div></figure>
+
+
+
+      <div class="resources">
+  <h2 id="related">Related WCAG 2.0 resources</h2>
+  <div class="resources-inner">
+	  <p>These tutorials provide best-practice guidance on implementing accessibility in different situations. This page combined the following WCAG 2.0 success criteria and techniques from different conformance levels:</p>
+	  
+	    <p><strong>Success Criteria:</strong></p>
+	    <ul>
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	            <li><p><a href="https://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-captions">1.2.2 Captions (Prerecorded):</a> Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such. (Level&nbsp;A)</p></li>
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	        
+	          
+	        
+	      
+	    </ul>
+	  
+	  
+  </div>
+</div>
+
+
+      <nav role="navigation" aria-label="Previous/Next" id="tools">
+  <ul>
+    
+      
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+          <li class="prev">
+            <span><a rel="prev" class="" href="../transcript/"><span class="count"></span><span class="txt"><span class="dir">Previous:</span><span class="title">Transcript Concepts and Examples</span></span></a></span>
+          </li>
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+          <li class="next">
+            <span><a rel="next" class="" href="../decision-tree/"><span class="count"></span><span class="txt"><span class="dir">Next:</span><span class="title">Decision Tree</span></span></a></span>
+          </li>
+        
+      
+        
+        
+        
+          <li class="next">
+            <span><a rel="next" class="" href="../playing/"><span class="count"></span><span class="txt"><span class="dir">Next:</span><span class="title">Playing accessible media</span></span></a></span>
+          </li>
+        
+      
+    
+  </ul>
+</nav>
+
+
+      <aside class="side-box github" role="complementary">
+  <h2 class="heading">We welcome your ideas</h2>
+  <p>Please send any ideas, suggestions, or comments to the <a href="mailto:wai-eo-editors@w3.org?subject=[Tutorial%20Feedback]">(publicly-archived) mailing list wai-eo-editors@w3.org</a>. You can also contribute to the <a href="https://github.com/w3c/wai-tutorials" rel="nofollow">code directly on Github</a>.</p>
+
+	<div class="editpage">
+  	<a class="btn" href="https://github.com/w3c/wai-tutorials/blob/master/source/accessible-media/production-audio-description.html.erb.md">Fork &amp; edit this page on Github</a>
+	</div>
+
+</aside>
+
+
+    </div>
+  </article>
+</main>
+<div class="navigation">
+  <nav role="navigation" aria-label="Main" id="nav">
+    <h2 class="list-heading" id="list-heading-tutorials">
+      
+          Accessible Media Tutorial
+      
+    </h2>
+    <ul aria-labelledby="list-heading-tutorials">
+      
+        
+      
+      
+        
+          <li class="intro"><a class="" href="../"><span class="count"></span><span class="txt">Concepts</span></a></li>
+        
+        
+          
+            <li>
+              <a class="" href="../production-captions/"><span class="count"></span><span class="txt">Production options for captions</span></a>
+              
+            </li>
+          
+        
+          
+            <li>
+              <a class="" href="../formats/"><span class="count"></span><span class="txt">Caption formats and examples</span></a>
+              
+            </li>
+          
+        
+          
+            <li>
+              <a class="" href="../automatically-generated-captions/"><span class="count"></span><span class="txt">Automatically generated captions</span></a>
+              
+            </li>
+          
+        
+          
+            <li>
+              <a class="" href="../subtitles/"><span class="count"></span><span class="txt">Subtitle concepts and examples</span></a>
+              
+            </li>
+          
+        
+          
+            <li>
+              <a class="" href="../transcript/"><span class="count"></span><span class="txt">Transcript Concepts and Examples</span></a>
+              
+            </li>
+          
+        
+          
+            <li>
+              <span class="current-a"><span class="count"></span><span class="txt"><span class="visuallyhidden">Current: </span>Production options for audio descriptions</span></span>
+              
+            </li>
+          
+        
+          
+            <li>
+              <a class="" href="../decision-tree/"><span class="count"></span><span class="txt">Decision Tree</span></a>
+              
+            </li>
+          
+        
+          
+            <li>
+              <a class="" href="../playing/"><span class="count"></span><span class="txt">Playing accessible media</span></a>
+              
+            </li>
+          
+        
+      
+    </ul>
+    <h2 class="list-heading" id="list-heading-topics">
+  All Tutorials
+</h2>
+<ul class="topics" aria-labelledby="list-heading-topics">
+	<li><a href="../../page-structure/"><span class="count"></span><span class="txt">Page Structure</span></a></li>
+  <li><a href="../../menus/"><span class="count"></span><span class="txt">Menus</span></a></li>
+	<li><a href="../../images/"><span class="count"></span><span class="txt">Images</span></a></li>
+	<li><a href="../../tables/"><span class="count"></span><span class="txt">Tables</span></a></li>
+	<li><a href="../../forms/"><span class="count"></span><span class="txt">Forms</span></a></li>
+  <li><a href="../../carousels/"><span class="count"></span><span class="txt">Carousels</span></a></li>
+  <li><a href="../../ideas/"><span class="count"></span><span class="txt">[Ideas] <span class="status">editors-draft</span></span></a></li>
+  <li><span class="current-a"><span class="count"></span><span class="txt"><span class="visuallyhidden">Current: </span>Accessible Media <span class="status">editors-draft</span></span></span></li>
+</ul>
+
+  </nav>
+</div>
+  </div>
+	<footer id="footer" role="contentinfo" aria-labelledby="wai_footerheading">
+    <div>
+		<h2 id="wai_footerheading">Document Information</h2>
+    <p><strong>Feedback: We welcome ideas for improvements, bug reports, and comments</strong> via <a href="https://github.com/w3c/wai-tutorials">GitHub</a> or e-mail to <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org</a> (a publicly archived list) or <a href="mailto:wai@w3.org">wai@w3.org</a> (a WAI staff-only list).</p>
+		<ul>
+			<li><strong>Status:</strong>
+				
+	        [EDITOR’S DRAFT] updated
+	      
+	      12 May 2017
+	      
+			</li>
+      <li>
+  Editors:
+  <ul class="inline">
+    <li>Geoff Freed</li>
+  </ul>
+
+  Contributors:
+  <ul class="inline">
+    <li>The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)</li>
+  </ul>
+</li>
+
+<li>
+  Developed with support from the <a href="https://www.w3.org/WAI/@@/">@@ project</a>
+</li>
+
+      <li>[<a class="" href="../../attributions/"><span class="count"></span><span class="txt">Attributions</span></a>]  [<a class="" href="../../changelog/"><span class="count"></span><span class="txt">Changelog</span></a>]</li>
+    </ul>
+    <p>
+    	[<a href="https://www.w3.org/WAI/sitemap.html">WAI Site Map</a>]
+    	[<a href="https://www.w3.org/WAI/sitehelp.html">Help with WAI Website</a>]
+    	[<a href="https://www.w3.org/WAI/search.php">Search</a>]
+    	[<a href="https://www.w3.org/WAI/contacts">Contacting WAI</a>]
+		</p>
+    <div class="copyright">
+        <p>
+	        Copyright &#xA9; 2014 W3C <sup>&#xAE;</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>) <a href="/Consortium/Legal/ipr-notice">Usage policies apply</a>.
+        </p>
+      </div><!-- ends copyright -->
+    </div>
+	</footer>
+	<script src="../../javascripts/main-11dc3c0f.js" type="text/javascript"></script>
+  <!-- Piwik -->
+  <script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDomains", ["*.www.w3.org/WAI"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+  var u="//www.w3.org/analytics/piwik/";
+  _paq.push(['setTrackerUrl', u+'piwik.php']);
+  _paq.push(['setSiteId', 328]);
+  var d=document, g=d.createElement('script'),
+  s=d.getElementsByTagName('script')[0];
+  g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js';
+  s.parentNode.insertBefore(g,s);
+  })();
+  </script>
+  <noscript><p><img src="//www.w3.org/analytics/piwik/piwik.php?idsite=328"
+  style="border:0;" alt="" /></p></noscript>
+  <!-- End Piwik Code -->
+	</body>
+</html>
