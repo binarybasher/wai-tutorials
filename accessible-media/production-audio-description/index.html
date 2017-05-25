@@ -107,7 +107,7 @@ one track to the other.</li>
 
 <p>Describing a video can be a time-consuming and complex process,
 depending on the subject matter. Before beginning, take a look at the
-<a href="page8.html">description decision tree</a> to determine if descriptions are
+<a href="../decision-tree/">description decision tree</a> to determine if descriptions are
 even necessary. For longer videos, it may be more time- and
 cost-efficient to hire a professional audio-description service provider
 to write and record descriptions.</p>
@@ -115,7 +115,7 @@ to write and record descriptions.</p>
 <p>Descriptions are usually recorded as human narration before being
 integrated into the video presentation, but technology and markup now
 exist to convey descriptions as text which are read aloud on the fly by
-screen readers or other text-to-speech (TTS) methods. <a href="#tts_dx">Read more about
+screen readers or other text-to-speech (TTS) methods. <a href="#production-workflow-audio-descriptions-tts-narration">Read more about
 text-to-speech descriptions</a>.</p>
 
 <p>An excellent place to learn the basics about audio descriptions is <a href="http://www.descriptionkey.org/">The
@@ -137,15 +137,15 @@ Project</a>.</p>
   <div class="box-content">
 <ol>
   <li><strong>Watch the video</strong><br />
-Note opportunities for descriptive narration (i.e., pauses in
-narration or dialog into which descriptions can be inserted).</li>
+ Note opportunities for descriptive narration (i.e., pauses in
+ narration or dialog into which descriptions can be inserted).</li>
   <li><strong>Write the description script</strong><br />
-Use a description-authoring tool, a word processor or any text
-editor to create the script that will be recorded by the narrator.</li>
+ Use a description-authoring tool, a word processor or any text
+ editor to create the script that will be recorded by the narrator.</li>
   <li><strong>Record the descriptions</strong><br />
-Using audio-editing software, record the narrator reading the
-description script. <a href="http://www.descriptionkey.org/technical_issues.html">Learn more about recording audio
-descriptions</a>.
+ Using audio-editing software, record the narrator reading the
+ description script. <a href="http://www.descriptionkey.org/technical_issues.html">Learn more about recording audio
+ descriptions</a>.
     <ul>
       <li>Alternatively, create a computer-generated rendering of the
 description script using TTS software. <a href="http://ncamftp.wgbh.org/ibm/dvs/">See examples of
@@ -155,10 +155,10 @@ media presentations.</li>
     </ul>
   </li>
   <li><strong>Create an open-described audio track</strong><br />
-Using audio-editing software, duplicate the original program audio
-track, then paste each audio description into this track at the
-appropriate time intervals. Add this new, open-described audio track
-to the presentation.</li>
+ Using audio-editing software, duplicate the original program audio
+ track, then paste each audio description into this track at the
+ appropriate time intervals. Add this new, open-described audio track
+ to the presentation.</li>
 </ol>
 
 
@@ -197,29 +197,61 @@ for TTS audio descriptions generally follows this pattern:</p>
   <div class="box-content">
 <ol>
   <li><strong>Watch the video</strong><br />
-Note opportunities for descriptive narration (i.e., pauses in
-narration or dialog into which descriptions can be inserted).</li>
+ Note opportunities for descriptive narration (i.e., pauses in
+ narration or dialog into which descriptions can be inserted).</li>
   <li><strong>Write the description script</strong><br />
-Using a <strong>caption-editing tool</strong>, write the description script that
-will be read aloud by a screen reader during the time of playback.</li>
+ Using a <strong>caption-editing tool</strong>, write the description script that
+ will be read aloud by a screen reader during the time of playback.</li>
   <li><strong>Assign timecodes to each description</strong><br />
-Each timecode will represent when the description should be read by
-the user's screen reader.</li>
+ Each timecode will represent when the description should be read by
+ the user's screen reader.</li>
   <li><strong>Export the description file</strong><br />
-Use the caption format (e.g., WebVTT or TTML) that is supported by
-the target player. This file will be transmitted during playback and
-will be read aloud by the user's screen reader.</li>
+ Use the caption format (e.g., WebVTT or TTML) that is supported by
+ the target player. This file will be transmitted during playback and
+ will be read aloud by the user's screen reader.</li>
 </ol>
 
 
   </div></figure>
+
+<p>Below is an image of a caption editor being used to timestamp an audio-description script.</p>
+
+<p><img alt="A caption editor showing a timestamped description script." src="../../img/dx_script-4222d033.png" /></p>
+
+<p>Using the <code>track</code> element and the <code><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#text-track-kind">kind</a></code> attribute, the descriptions can be delivered at the time of playback and a screen reader will read them aloud. Below is a code sample:</p>
+
+<figure class="code ">
+  <figcaption>Code snippet: </figcaption>
+<pre class="highlight html"><code><span class="nt">&lt;video</span> <span class="na">controls</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"myvideo.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;track</span> <span class="na">kind=</span><span class="s">"descriptions"</span> <span class="na">class=</span><span class="s">"visually-hidden"</span> <span class="na">src=</span><span class="s">"my_tts_descriptions.vtt"</span> <span class="na">srclang=</span><span class="s">"en"</span> <span class="na">label=</span><span class="s">"Descriptions"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/video&gt;</span>
+</code></pre>
+</figure>
+<p>The <code>kind</code> attribute will cause the description file to be received invisibly (e.g., off-screen) so sighted users will not see it, but screen readers will be aware of it. Screen readers will then read the description text as it is delivered, synchronized at the time of playback. Read more about <a href="https://www.w3.org/WAI/GL/wiki/Using_the_track_element_to_provide_audio_descriptions">techniques for delivering TTS descriptions</a>. See <a href="http://ncamftp.wgbh.org/ibm/dvs/#videos">functioning examples of TTS descriptions</a> using the <code>track</code> element along with Javascript to illustrate how screen readers will read off-screen descriptions aloud.</p>
+
+<h2 id="extended-descriptions">Extended descriptions</h2>
+
+<p>Typically, descriptions are written to fit into natural pauses in narration or dialog. However, there will be circumstances where the pauses are not long enough to accommodate a full description. In these cases, extended descriptions may be implemented. In an extended description, the video and audio tracks are programmatically paused when the description begins playing. When the description is finished playing, the video and audio tracks are programmatically resumed. At the next instance of an extended description, the process is repeated. Note that extended and "regular" descriptions may be mixed in a single multimedia presentation.</p>
+
+<p>The only markup-based method for providing extended audio descriptions is to use <a href="https://www.w3.org/TR/SMIL3/">SMIL 3.0</a>, a language for writing interactive multimedia presentations. Support for SMIL is very limited, however, and may require the use of a custom player. Other non-markup-based methods have been experimented with, such as creating an open-described video with a video track that appears to freeze while a separate open-description track plays. See an <a href="https://mass.pbslearningmedia.org/resource/tdc02.sci.life.reg.deathvall/teri-and-jairus-biome-buddies/na/">example of a video with open extended audio descriptions</a> (created using a non-markup method). Also, read <a href="http://ncam.wgbh.org/file_download/103">one method for creating videos with extended open audio descriptions (see chapter 4.9)</a>.&lt;/p&gt;</p>
+
+<h2 id="resources-for-writing-descriptions">Resources for writing descriptions</h2>
+
+<p>The importance of presenting users with high-quality, accurate descriptions cannot be overemphasized. Use the guidelines below to help create descriptions that are informative and useful.</p>
+
+<ul>
+  <li><a href="http://www.descriptionkey.org/how_to_describe.html"><abbr title="Described and Captioned Media Program">DCMP</abbr> Description Key</a></li>
+  <li><a href="https://www.dcmp.org/ai/227/"><abbr title="Described and Captioned Media Program">DCMP</abbr> Description Tip Sheet</a></li>
+  <li><a href="http://diagramcenter.org/research.html#multimedia">Accessible Multimedia whitepaper</a></li>
+</ul>
 
 
 
       <div class="resources">
   <h2 id="related">Related WCAG 2.0 resources</h2>
   <div class="resources-inner">
-	  <p>These tutorials provide best-practice guidance on implementing accessibility in different situations. This page combined the following WCAG 2.0 success criteria and techniques from different conformance levels:</p>
+	  <p>These tutorials provide best-practice guidance on implementing accessibility in different situations. This page combines the following WCAG 2.0 success criteria and techniques from different conformance levels:</p>
 	  
 	    <p><strong>Success Criteria:</strong></p>
 	    <ul>
@@ -238,13 +270,13 @@ will be read aloud by the user's screen reader.</li>
 	      
 	        
 	          
-	            <li><p><a href="https://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-audio-desc">1.2.3 Audio Descriotion or Media Alternative:</a> An alternative for time-based media or audio description of the prerecorded video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labeled as such. (Level&nbsp;A)</p></li>
+	            <li><p><a href="https://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-audio-desc">1.2.3 Audio Description or Media Alternative:</a> An alternative for time-based media or audio description of the prerecorded video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labeled as such. (Level&nbsp;A)</p></li>
 	          
 	        
 	      
 	        
 	          
-	            <li><p><a href="https://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-audio-desc-only">1.2.5 Audio Descriotion (Prerecorded):</a> Audio description is provided for all prerecorded video content in synchronized media. (Level&nbsp;AA)</p></li>
+	            <li><p><a href="https://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-audio-desc-only">1.2.5 Audio Description (Prerecorded):</a> Audio description is provided for all prerecorded video content in synchronized media. (Level&nbsp;AA)</p></li>
 	          
 	        
 	      
@@ -934,13 +966,13 @@ will be read aloud by the user's screen reader.</li>
 				
 	        [EDITOR’S DRAFT] updated
 	      
-	      16 May 2017
+	      25 May 2017
 	      
 			</li>
       <li>
   Editors:
   <ul class="inline">
-    <li>Geoff Freed</li>
+    <li>Geoff Freed</li><li>Judy Brewer</li>
   </ul>
 
   Contributors:
@@ -950,7 +982,7 @@ will be read aloud by the user's screen reader.</li>
 </li>
 
 <li>
-  Developed with support from the <a href="https://www.w3.org/WAI/@@/">@@ project</a>
+  Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/">U.S. Access Board, WCAG TA Project</a>
 </li>
 
       <li>[<a class="" href="../../attributions/"><span class="count"></span><span class="txt">Attributions</span></a>]  [<a class="" href="../../changelog/"><span class="count"></span><span class="txt">Changelog</span></a>]</li>
