@@ -68,8 +68,7 @@
 
       <h2 id="caption-basics">Caption basics</h2>
 
-<p>Captions are intended for people who are deaf or hard of hearing. They
-can be open or closed:</p>
+<p>Captions were invented for people who are deaf or hard of hearing, although they are <a href="concepts.html#cc+ad_purpose">recognized to benefit many audiences</a>. They can be open or closed:</p>
 
 <ul>
   <li><strong>Closed captions</strong> can be hidden and revealed by users, typically
@@ -77,9 +76,7 @@ by operating a button or menu on the player's control bar.</li>
   <li><strong>Open captions</strong> are visible to everyone and cannot be turned off.</li>
 </ul>
 
-<p>Captions always reflect dialog and narration, and are always written in
-the same language as the audio. They also contain important <strong>non-speech
-information</strong>, such as sound effects or speaker cues.</p>
+<p>Captions always reflect dialog and narration, and are always written in the same language as the audio (<a href="../subtitles/">subtitles</a>, on the other hand, are a translation of the audio into another language). They also contain important <strong>non-speech information</strong>, such as sound effects or speaker cues.</p>
 
 <p>There are three ways to present captions to viewers:</p>
 
@@ -105,17 +102,12 @@ audio is provided.</p>
 
 <h2 id="production-workflow-pre-produced-captions">Production workflow: pre-produced captions</h2>
 
-<p>From an authoring standpoint, captions are simply text presented through
+<p>From a technical perspective, captions are simply text presented through
 markup that contains timing information and positioning codes. There are
 a variety of do-it-yourself tools available for creating captions for
-pre-produced video and audio clips. (Live or real-time captions are
-created on the fly at the time of transmission or broadcast, and require
-the highly developed skills of trained stenographers. They are not for
-do-it-yourselfers.) For large quantities of material, though, it may be
-more time and cost efficient to hire a caption agency to produce the
-captions.</p>
+pre-produced video and audio clips.</p>
 
-<h3 id="basic-workflow-for-creating-pre-produced-captions-for-playback-on-desktop-or-mobile-platforms">Basic workflow for creating pre-produced captions (for playback on desktop or mobile platforms):</h3>
+<h3 id="basic-workflow-for-creating-pre-produced-captions">Basic workflow for creating pre-produced captions:</h3>
 
 <figure class="sample ">
   <figcaption>Example: </figcaption>
@@ -170,16 +162,7 @@ is spoken.</li>
 
 <h3 id="a-word-about-styling-captions">A word about styling captions</h3>
 
-<p>Most caption-creation tools give authors the ability to style captions
-in a number of ways: e.g., adding color to the text or background,
-specifying different font faces and sizes, etc. While <a href="../formats/#caption-formats">commonly used
-formats</a> (such as WebVTT and TTML) contain
-styling markup, most media players on both desktop and mobile platforms
-<strong>do not</strong> yet support all styling features reliably or consistently.
-Therefore, unless the target player is known in advance to support
-specific caption style attributes, it is usually best to avoid using
-styling markup to present captions and to rely instead on the browser's
-default presentation style (usually white characters on a black box).</p>
+<p>Most caption-creation tools give authors the ability to style captions in a number of ways: e.g., adding color to the text or background, specifying different font faces and sizes, etc. While it is possible to add styling information to captions, the support in browsers and other media players varies. If the media is produced for a specific player, style the captions to that player’s capabilities.  Otherwise, rely instead on the player's default presentation style (usually white characters on a black box).</p>
 
 <p id="cutom_cc">Note that many media players give users the option to <a href="../playing/#user-customization-of-captions">customize captions to personal preferences</a>, and these preferences always override author styling. For some users, customizing captions is essential, not just an enhancement:  styling captions in specific manners (for example, yellow text over a black background, with a very large font size) may be the only way for them to make the text readable.</p>
 
